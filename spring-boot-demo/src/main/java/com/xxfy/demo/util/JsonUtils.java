@@ -112,14 +112,4 @@ public class JsonUtils {
 		return null;
 	}
 	
-	
-	
-	public static void main(String[] args) {
-		Map<String,Object> map = new HashMap<String,Object>();
-		map.put("name", "xiaojun");
-		map.put("age", 30);
-		System.out.println(JsonUtils.toStringFromMap(map));
-	}
-	
-
 }

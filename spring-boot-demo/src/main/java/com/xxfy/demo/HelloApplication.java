@@ -20,6 +20,7 @@ public class HelloApplication extends org.springframework.boot.web.support.Sprin
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(HelloApplication.class);
 	}
+
 	
 
 }

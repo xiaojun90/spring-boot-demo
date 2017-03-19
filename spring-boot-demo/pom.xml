@@ -5,7 +5,7 @@
   <groupId>com.xxfy.demo</groupId>
   <artifactId>spring-boot-demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>spring-boot-demo</name>
   <url>http://maven.apache.org</url>
@@ -19,6 +19,8 @@
     <font.awesome.version>4.7.0</font.awesome.version>
     <jackson.jaxrs.version>1.9.13</jackson.jaxrs.version>
     <mysql.version>5.1.37</mysql.version>
+    <sitemesh.verison>3.0.1</sitemesh.verison>
+    <druid.verison>1.0.19</druid.verison>
   </properties>
   <!-- 配置当前应用为spring-boot应用 -->
   <parent>
@@ -108,8 +110,13 @@
     <dependency>  
         <groupId>com.alibaba</groupId>  
         <artifactId>druid</artifactId>  
-        <version>1.0.19</version>  
+        <version>${druid.verison}</version>  
     </dependency> 
+    <dependency>
+	    <groupId>org.sitemesh</groupId>
+	    <artifactId>sitemesh</artifactId>
+	    <version>${sitemesh.verison}</version>
+	</dependency>
   </dependencies>
   <build>
   	<plugins>
