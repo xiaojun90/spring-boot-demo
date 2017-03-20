@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" 
+           uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
@@ -9,7 +11,7 @@
 <!-- BEGIN HEAD -->
 <head>
 <meta charset="utf-8"/>
-<title><sitemesh:write property='title'/></title>
+<title><sitemesh:write property="title"/></title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="" name="description"/>
@@ -36,7 +38,9 @@
 <link href="${contextPath }/assets/css/themes/default.css" rel="stylesheet" type="text/css" id="style_color"/>
 <link href="${contextPath }/assets/css/custom.css" rel="stylesheet" type="text/css"/>
 <!-- END THEME STYLES -->
-<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="shortcut icon" href="${contextPath }/logo.ico?v=1.1" type="image/x-icon"/>
+<script src="${contextPath }/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="${contextPath }/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
 <sitemesh:write property='head'/>
 </head>
 <!-- END HEAD -->
@@ -1324,7 +1328,7 @@
 			<!-- END PAGE HEADER-->
 			<div class="clearfix">
 			</div>
-			<sitemesh:write property='title'/>
+			<sitemesh:write property='body'/>
 		</div>
 	</div>
 	<!-- END CONTENT -->
@@ -1348,8 +1352,8 @@
 <script src="${contextPath }/assets/plugins/respond.min.js"></script>
 <script src="${contextPath }/assets/plugins/excanvas.min.js"></script> 
 <![endif]-->
-<script src="${contextPath }/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
-<script src="${contextPath }/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<%-- <script src="${contextPath }/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="${contextPath }/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script> --%>
 <!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
 <script src="${contextPath }/assets/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
 <script src="${contextPath }/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
@@ -1387,7 +1391,7 @@
 jQuery(document).ready(function() {    
    App.init(); // initlayout and core plugins
    Index.init();
-   Index.initJQVMAP(); // init index page's custom scripts
+   /* Index.initJQVMAP(); */ // init index page's custom scripts
    Index.initCalendar(); // init index page's custom scripts
    Index.initCharts(); // init index page's custom scripts
    Index.initChat();
@@ -1395,6 +1399,9 @@ jQuery(document).ready(function() {
    Index.initDashboardDaterange();
    Index.initIntro();
    Tasks.initDashboardWidget();
+   if (document.title == "") {
+	   document.title = "后台管理";
+   }
 });
 </script>
 <!-- END JAVASCRIPTS -->
