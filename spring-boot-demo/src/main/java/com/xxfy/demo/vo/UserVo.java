@@ -4,6 +4,20 @@ import java.io.Serializable;
 
 public class UserVo implements Serializable{
 
+	public UserVo(String userName, String password, String email, String sex, String tel, String userId) {
+		super();
+		this.userName = userName;
+		this.password = password;
+		this.email = email;
+		this.sex = sex;
+		this.tel = tel;
+		this.userId = userId;
+	}
+	
+	public UserVo() {
+		super();
+	}
+
 	/**
 	 * 
 	 */
