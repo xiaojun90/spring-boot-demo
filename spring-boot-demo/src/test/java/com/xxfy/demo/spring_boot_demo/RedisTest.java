@@ -8,7 +8,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import com.xxfy.demo.vo.User;
+import com.xxfy.demo.vo.UserVo;
 
 import junit.framework.TestCase;
 
@@ -20,20 +20,25 @@ public class RedisTest extends TestCase{
     private StringRedisTemplate stringRedisTemplate;
 	
 	@Autowired
-    private RedisTemplate<String, User> redisTemplate;
+    private RedisTemplate<String, Object> redisTemplate;
+	
 	
 	@Test
 	public void test() {
 		//保存字符串
-		stringRedisTemplate.opsForValue().set("aaa", "111");
+		stringRedisTemplate.opsForValue().set("aaa", "中文");
 		System.out.println(stringRedisTemplate.opsForValue().get("aaa"));
 	}
 	
+	
 	@Test
-	public void test1() {
-		User user = new User("超人", 20);
-        redisTemplate.opsForValue().set("user001", user);
-        System.out.println(redisTemplate.opsForValue().get("超人").getAge());
-		
+	public void test2() {
+		UserVo vo = new UserVo();
+		vo.setUserId("001");
+		vo.setUserName("萧萧风雨");
+		vo.setPassword("123456");
+		redisTemplate.opsForValue().set("user0001", vo);
+		System.out.println(((UserVo) redisTemplate.opsForValue().get("user0001")).getPassword());
 	}
+	
  }

@@ -7,6 +7,95 @@
 <title>用户管理</title>
 </head>
 <body>
+	<div class="tab-pane " id="tab_2">
+		<div class="portlet box green">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-reorder"></i>用户查询
+				</div>
+				<div class="tools">
+					<a href="javascript:;" class="collapse"></a>
+					<a href="#portlet-config" data-toggle="modal" class="config"></a>
+					<a href="javascript:;" class="reload"></a>
+					<a href="javascript:;" class="remove"></a>
+				</div>
+			</div>
+			<div class="portlet-body form">
+				<!-- BEGIN FORM-->
+				<form action="#" class="form-horizontal">
+					<div class="form-body">
+						<h3 class="form-section">用户信息</h3>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="control-label col-md-3">用户ID</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control" placeholder="用户ID">
+										<span class="help-block">
+										</span>
+									</div>
+								</div>
+							</div>
+							<!--/span-->
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="control-label col-md-3">用户名</label>
+										<div class="col-md-9">
+										<input type="text" class="form-control" placeholder="用户名">
+										<span class="help-block">
+										</span>
+									</div>
+								</div>
+							</div>
+							<!--/span-->
+						</div>
+						<!--/row-->
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="control-label col-md-3">性别</label>
+									<div class="col-md-9">
+										<select class="form-control">
+											<option value="">全部</option>
+											<option value="1">男</option>
+											<option value="0">女</option>
+										</select>
+										<span class="help-block">
+										</span>
+									</div>
+								</div>
+							</div>
+							<!--/span-->
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="control-label col-md-3">电话</label>
+									<div class="col-md-9">
+										<input type="text" class="form-control" placeholder="电话">
+										<span class="help-block">
+										</span>
+									</div>
+								</div>
+							</div>
+							<!--/span-->
+						</div>
+					</div>
+					<div class="form-actions fluid">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="col-md-offset-3 col-md-9">
+									<button type="submit" class="btn green">查询</button>
+									<button type="button" class="btn default">重置</button>
+								</div>
+							</div>
+							<div class="col-md-6">
+							</div>
+						</div>
+					</div>
+				</form>
+				<!-- END FORM-->
+			</div>
+		</div>
+	</div>
 	<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
         <thead>
             <tr>

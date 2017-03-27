@@ -19,7 +19,9 @@ public class WebSiteMeshFilter extends ConfigurableSiteMeshFilter{
 		.addExcludedPath("/assets/**")
 		.addExcludedPath("/js/**")
 		.addExcludedPath("/css/**")
-		.addExcludedPath("/img/**"); 
+		.addExcludedPath("/img/**")
+		.addExcludedPath("/login")  //登录
+		.addExcludedPath("/logout");  //登出
 	}
 	
 }

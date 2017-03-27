@@ -572,7 +572,7 @@
 							用户管理</a>
 						</li>
 						<li>
-							<a href="layout_idle_timeout.html">
+							<a href="${contextPath }/admin/permissions/usergroup">
 							<span class="badge badge-roundless badge-important">
 								new
 							</span>

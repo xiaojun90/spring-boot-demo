@@ -1,4 +1,4 @@
-package com.xxfy.demo.controller;
+package com.xxfy.demo.controller.permissions;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +20,11 @@ public class PermissionsPageController {
 	@RequestMapping(value="user",method=RequestMethod.GET)
 	public String userMangerPage() {
 		return "/admin/permissions/user";
+	}
+	
+	@RequestMapping(value="usergroup",method=RequestMethod.GET)
+	public String userGroupMangerPage() {
+		return "/admin/permissions/usergroup";
 	}
 
 }

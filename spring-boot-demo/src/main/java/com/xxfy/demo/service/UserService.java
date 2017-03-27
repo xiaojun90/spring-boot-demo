@@ -1,5 +1,7 @@
 package com.xxfy.demo.service;
 
+import java.util.List;
+
 import com.xxfy.demo.vo.UserVo;
 
 /**
@@ -15,4 +17,6 @@ public interface UserService {
 	 * @return
 	 */
 	UserVo getUserById(String uId);
+	
+	List<UserVo> getAllUser();
 }
